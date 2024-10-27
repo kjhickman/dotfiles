@@ -46,6 +46,7 @@
     NSGlobalDomain.ApplePressAndHoldEnabled = false;
     NSGlobalDomain.InitialKeyRepeat = 15;
     NSGlobalDomain.KeyRepeat = 1;
+    NSGlobalDomain."com.apple.keyboard.fnState" = true;
   };
 
   # Set Git commit hash for darwin-version.
