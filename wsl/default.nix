@@ -6,6 +6,7 @@
 
   environment.systemPackages = [
     pkgs.wget # needed for VSCode remote
+    pkgs.docker
   ];
 
   # needed for VSCode remote

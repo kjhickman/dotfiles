@@ -7,7 +7,7 @@
     userEmail = "kyle@txhickman.com";
     extraConfig = {
       init.defaultBranch = "main";
-      core.editor = "vim";
+      core.editor = "nvim";
       core.autocrlf = "input";
       push.default = "current";
 
