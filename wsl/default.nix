@@ -1,21 +1,12 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports =
-    [
-      inputs.home-manager.nixosModules.default
-    ];
-
   wsl.enable = true;
   wsl.defaultUser = "kyle";
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
-  home-manager = {
-    users = {
-      "kyle" = import ./home.nix;
-    };
-  };
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "24.05";
 }
