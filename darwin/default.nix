@@ -40,10 +40,11 @@
       "/Applications/Obsidian.app"
       "/Applications/WezTerm.app"
     ];
+    dock.show-recents = false;
     finder.FXPreferredViewStyle = "clmv";
     loginwindow.GuestEnabled = false;
     NSGlobalDomain.ApplePressAndHoldEnabled = false;
-    NSGlobalDomain.InitialKeyRepeat = 20;
+    NSGlobalDomain.InitialKeyRepeat = 15;
     NSGlobalDomain.KeyRepeat = 1;
   };
 
