@@ -6,6 +6,7 @@
     ./git.nix
     ./packages.nix
     ./ssh.nix
+    ./zsh.nix
   ];
 
   home.stateVersion = "24.05";

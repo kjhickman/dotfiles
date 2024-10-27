@@ -6,7 +6,7 @@
   # Set system hostname
   networking.hostName = "dalaran";
   networking.computerName = "Kyle's MacBook Pro";
-  system.defaults.smb.NetBIOSName = "dalarans";
+  system.defaults.smb.NetBIOSName = "dalaran";
 
   # Installs homebrew
   nix-homebrew = {
@@ -14,12 +14,6 @@
     enableRosetta = true;
     user = "kyle";
   };
-
-  environment.systemPackages =
-    [
-      pkgs.neovim
-      pkgs.tmux
-    ];
 
   nixpkgs.config.allowUnfree = true;
 
