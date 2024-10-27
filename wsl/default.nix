@@ -4,8 +4,8 @@
   wsl.enable = true;
   wsl.defaultUser = "kyle";
 
-  programs.zsh.enable = true;
-  users.users.kyle.shell = pkgs.zsh;
+  programs.fish.enable = true;
+  users.users.kyle.shell = pkgs.fish;
 
   nixpkgs.config.allowUnfree = true;
 
