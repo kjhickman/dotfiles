@@ -23,6 +23,7 @@
       "obsidian"
       "qbittorrent"
       "rider"
+      "slack"
       "steam"
       "visual-studio-code"
       "vlc"
