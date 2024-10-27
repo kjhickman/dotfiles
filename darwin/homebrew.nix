@@ -19,6 +19,7 @@
       "jordanbaird-ice"
       "keepingyouawake"
       "maccy"
+      "mullvadvpn"
       "obsidian"
       "qbittorrent"
       "rider"
