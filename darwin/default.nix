@@ -24,15 +24,10 @@
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
-  # Create /etc/zshrc that loads the nix-darwin environment.
-  programs.zsh.enable = true;  # default shell on catalina
-  programs.fish.enable = true;
-  users.users = {
-    kyle = {
-      home = "/Users/kyle";
-      shell = pkgs.fish;
-    };
-  };
+  # Disable nix-darwin shell integrations
+  programs.bash.enable = false;
+  programs.fish.enable = false;
+  programs.zsh.enable = false;
 
   system.defaults = {
     dock.autohide = true;

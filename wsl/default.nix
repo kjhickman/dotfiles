@@ -4,6 +4,16 @@
   wsl.enable = true;
   wsl.defaultUser = "kyle";
 
+  environment.systemPackages = [
+    pkgs.wget # needed for VSCode remote
+  ];
+
+  # needed for VSCode remote
+  programs.nix-ld = {
+    enable = true;
+    package = pkgs.nix-ld-rs;
+  };
+
   programs.fish.enable = true;
   users.users.kyle.shell = pkgs.fish;
 
