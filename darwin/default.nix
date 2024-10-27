@@ -25,9 +25,10 @@
   nix.settings.experimental-features = "nix-command flakes";
 
   # Disable nix-darwin shell integrations
-  programs.bash.enable = false;
-  programs.fish.enable = false;
-  programs.zsh.enable = false;
+  # programs.bash.enable = false;
+  # programs.fish.enable = false;
+  # programs.zsh.enable = false;
+  programs.zsh.enable = true;
 
   system.defaults = {
     dock.autohide = true;
@@ -41,9 +42,8 @@
     ];
     finder.FXPreferredViewStyle = "clmv";
     loginwindow.GuestEnabled = false;
-    # NSGlobalDomain.AppleInterfaceStyle = "System";
     NSGlobalDomain.ApplePressAndHoldEnabled = false;
-    NSGlobalDomain.InitialKeyRepeat = 10;
+    NSGlobalDomain.InitialKeyRepeat = 20;
     NSGlobalDomain.KeyRepeat = 1;
   };
 
