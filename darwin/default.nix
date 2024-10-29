@@ -34,7 +34,7 @@
     dock.autohide = true;
     dock.autohide-time-modifier = 0.0;
     dock.autohide-delay = 0.0;
-    dock.orientation = "left";
+    dock.orientation = "bottom";
     dock.persistent-apps = [
       "/Applications/Brave Browser.app"
       "/Applications/Obsidian.app"
