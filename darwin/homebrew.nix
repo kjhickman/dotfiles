@@ -21,6 +21,7 @@
       "maccy"
       "mullvadvpn"
       "obsidian"
+      "ppsspp"
       "qbittorrent"
       "rider"
       "slack"
@@ -28,6 +29,7 @@
       "visual-studio-code"
       "vlc"
       "wezterm"
+      "zen-browser"
     ];
   };
 }

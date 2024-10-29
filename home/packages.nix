@@ -6,6 +6,7 @@
     bat
     eza
     go
+    nodePackages.localtunnel
     neovim
     ripgrep
     rustup
