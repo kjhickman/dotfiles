@@ -12,6 +12,7 @@
     casks = [
       "brave-browser"
       "bruno"
+      "curseforge"
       "discord"
       "docker"
       "font-jetbrains-mono-nerd-font"
@@ -30,6 +31,7 @@
       "vlc"
       "wezterm"
       "zen-browser"
+      "zoom"
     ];
   };
 }

@@ -4,9 +4,11 @@
   home.packages = with pkgs; [
     awscli2
     bat
+    gitversion
     eza
+    flyctl
     go
-    nodePackages.localtunnel
+    go-task
     neovim
     ripgrep
     rustup
