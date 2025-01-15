@@ -9,6 +9,7 @@
     flyctl
     go
     go-task
+    just
     neovim
     ripgrep
     rustup

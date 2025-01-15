@@ -10,19 +10,18 @@
     };
 
     casks = [
-      "brave-browser"
-      "bruno"
       "curseforge"
       "discord"
       "docker"
+      "firefox"
       "font-jetbrains-mono-nerd-font"
+      "ghostty"
       "google-drive"
       "jordanbaird-ice"
       "keepingyouawake"
       "maccy"
       "mullvadvpn"
       "obsidian"
-      "ppsspp"
       "qbittorrent"
       "rider"
       "slack"
