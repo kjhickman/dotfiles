@@ -14,5 +14,6 @@
     ripgrep
     rustup
     terraform
+    zig
   ];
 }
