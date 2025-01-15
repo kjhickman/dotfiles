@@ -38,7 +38,7 @@
     dock.persistent-apps = [
       "/Applications/Zen Browser.app"
       "/Applications/Obsidian.app"
-      "/Applications/WezTerm.app"
+      "/Applications/Ghostty.app"
     ];
     dock.show-recents = false;
     finder.FXPreferredViewStyle = "clmv";

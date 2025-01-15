@@ -28,7 +28,6 @@
       "steam"
       "visual-studio-code"
       "vlc"
-      "wezterm"
       "zen-browser"
       "zoom"
     ];
