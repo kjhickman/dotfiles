@@ -15,5 +15,6 @@
     rustup
     terraform
     zig
+    zls
   ];
 }
