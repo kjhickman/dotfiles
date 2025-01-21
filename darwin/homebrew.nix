@@ -16,6 +16,7 @@
       "firefox"
       "font-jetbrains-mono-nerd-font"
       "ghostty"
+      "godot"
       "google-drive"
       "jordanbaird-ice"
       "keepingyouawake"
