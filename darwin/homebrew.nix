@@ -29,7 +29,6 @@
       "steam"
       "visual-studio-code"
       "vlc"
-      "zen-browser"
       "zoom"
     ];
   };

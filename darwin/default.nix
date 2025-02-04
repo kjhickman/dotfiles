@@ -36,7 +36,6 @@
     dock.autohide-delay = 0.0;
     dock.orientation = "bottom";
     dock.persistent-apps = [
-      "/Applications/Zen Browser.app"
       "/Applications/Firefox.app"
       "/Applications/Obsidian.app"
       "/Applications/Ghostty.app"
