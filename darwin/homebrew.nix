@@ -11,6 +11,7 @@
 
     casks = [
       "curseforge"
+      "cursor"
       "discord"
       "docker"
       "firefox"
@@ -28,6 +29,7 @@
       "slack"
       "steam"
       "visual-studio-code"
+      "visual-studio-code@insiders"
       "vlc"
       "zoom"
     ];
