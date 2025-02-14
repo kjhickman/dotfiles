@@ -8,6 +8,10 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    initExtra = ''
+      export PATH="$HOME/.cargo/bin:$PATH"
+    '';
+
     # loginExtra = lib.mkIf pkgs.stdenv.isDarwin ''
     #   # macOS updates clear /etc/zshrc back to Apple defaults; this segment was
     #   # taken from that file.
