@@ -31,6 +31,7 @@
       "visual-studio-code"
       "visual-studio-code@insiders"
       "vlc"
+      "warp"
       "zoom"
     ];
   };
