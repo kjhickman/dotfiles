@@ -36,7 +36,7 @@
     dock.persistent-apps = [
       "/Applications/Firefox.app"
       "/Applications/Obsidian.app"
-      "/Applications/Ghostty.app"
+      "/Applications/Warp.app"
     ];
     dock.show-recents = false;
     finder.FXPreferredViewStyle = "clmv";

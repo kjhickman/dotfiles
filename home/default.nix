@@ -8,6 +8,7 @@
     ./packages.nix
     ./ssh.nix
     ./starship.nix
+    ./warp.nix
     ./zsh.nix
   ];
 
