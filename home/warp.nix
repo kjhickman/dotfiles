@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
-{
-  home.file.".warp/themes/catppuccin_latte.yaml".text = ''
+let 
+  catppuccinLatte = ''
     background: '#eff1f5'
     accent: '#dc8a78'
     foreground: '#4c4f69'
@@ -27,7 +27,7 @@
         white: '#bcc0cc'
   '';
 
-  home.file.".warp/themes/catppuccin_macchiato.yaml".text = ''
+  catppuccinMacchiato = ''
     background: '#24273a'
     accent: '#f4dbd6'
     foreground: '#cad3f5'
@@ -52,4 +52,13 @@
         cyan: '#8bd5ca'
         white: '#a5adcb'
   '';
+
+  getThemePath = name:
+    if pkgs.stdenv.isDarwin 
+    then ".warp/themes/${name}.yaml"
+    else ".local/share/warp-terminal/themes/${name}.yaml";
+in
+{
+  home.file.${getThemePath "catppuccin_latte"}.text = catppuccinLatte;
+  home.file.${getThemePath "catppuccin_macchiato"}.text = catppuccinMacchiato;
 }
