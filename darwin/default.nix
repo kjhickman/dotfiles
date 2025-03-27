@@ -34,7 +34,7 @@
     dock.autohide-delay = 0.0;
     dock.orientation = "bottom";
     dock.persistent-apps = [
-      "/Applications/Firefox.app"
+      "/Applications/Google Chrome.app"
       "/Applications/Obsidian.app"
       "/Applications/Warp.app"
     ];
