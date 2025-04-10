@@ -11,7 +11,7 @@
 
     casks = [
       "curseforge"
-      "cursor"
+      "claude"
       "discord"
       "docker"
       "firefox"

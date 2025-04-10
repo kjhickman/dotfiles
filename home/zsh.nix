@@ -9,7 +9,7 @@
     syntaxHighlighting.enable = true;
 
     initExtra = ''
-      export PATH="$HOME/.cargo/bin:$PATH"
+      export PATH="$HOME/.dotnet/tools:$HOME/.cargo/bin:$PATH"
     '';
 
     # loginExtra = lib.mkIf pkgs.stdenv.isDarwin ''
