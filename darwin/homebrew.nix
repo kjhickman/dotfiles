@@ -10,6 +10,7 @@
     };
 
     casks = [
+      "brave-browser"
       "curseforge"
       "claude"
       "discord"
