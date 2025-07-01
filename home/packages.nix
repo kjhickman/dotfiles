@@ -11,6 +11,7 @@
     go-task
     just
     neovim
+    nodejs_24
     ripgrep
     rustup
     terraform
