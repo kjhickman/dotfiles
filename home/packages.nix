@@ -17,5 +17,7 @@
     terraform
     zig
     zls
+
+    nodePackages."@angular/cli"
   ];
 }
