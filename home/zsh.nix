@@ -8,7 +8,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    initExtra = ''
+    initContent = ''
       export DOTNET_ROOT="$(realpath $(which dotnet))/.."
       export PATH="$HOME/.dotnet/tools:$HOME/.cargo/bin:$PATH"
     '';
