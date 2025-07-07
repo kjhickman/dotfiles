@@ -30,6 +30,7 @@
       "rider"
       "slack"
       "steam"
+      "tailscale"
       "visual-studio-code"
       "vlc"
       "warp"
