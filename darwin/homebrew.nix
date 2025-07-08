@@ -34,6 +34,7 @@
       "visual-studio-code"
       "vlc"
       "warp"
+      "windows-app"
       "zoom"
     ];
   };
