@@ -28,13 +28,13 @@
       "obsidian"
       "qbittorrent"
       "rider"
+      "rustdesk"
       "slack"
       "steam"
       "tailscale"
       "visual-studio-code"
       "vlc"
       "warp"
-      "windows-app"
       "zoom"
     ];
   };
