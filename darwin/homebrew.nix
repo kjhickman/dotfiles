@@ -10,6 +10,7 @@
     };
 
     casks = [
+      "anydesk"
       "brave-browser"
       "curseforge"
       "claude"
@@ -28,7 +29,6 @@
       "obsidian"
       "qbittorrent"
       "rider"
-      "rustdesk"
       "slack"
       "steam"
       "tailscale"
