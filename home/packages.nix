@@ -4,9 +4,10 @@
   home.packages = with pkgs; [
     awscli2
     bat
-    gitversion
+    claude-code
     eza
     flyctl
+    gitversion
     go
     go-task
     just

@@ -11,9 +11,6 @@
 
     casks = [
       "anydesk"
-      "brave-browser"
-      "curseforge"
-      "claude"
       "discord"
       "docker-desktop"
       "firefox"
@@ -31,10 +28,8 @@
       "rider"
       "slack"
       "steam"
-      "tailscale"
       "visual-studio-code"
       "vlc"
-      "warp"
       "zoom"
     ];
   };
