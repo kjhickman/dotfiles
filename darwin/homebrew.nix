@@ -21,6 +21,7 @@
       "google-drive"
       "jordanbaird-ice"
       "keepingyouawake"
+      "lm-studio"
       "maccy"
       "mullvad-vpn"
       "obsidian"
