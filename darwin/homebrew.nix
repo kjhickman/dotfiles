@@ -10,7 +10,6 @@
     };
 
     casks = [
-      "anydesk"
       "discord"
       "docker-desktop"
       "firefox"
