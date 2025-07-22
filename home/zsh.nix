@@ -9,7 +9,7 @@
     syntaxHighlighting.enable = true;
 
     initContent = ''
-      export DOTNET_ROOT="/etc/profiles/per-user/kyle/bin/dotnet"
+      export DOTNET_ROOT="$(realpath $(which dotnet))/.."
       export PATH="$HOME/.dotnet/tools:$HOME/.cargo/bin:$PATH"
     '';
 
