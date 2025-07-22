@@ -10,6 +10,7 @@
     };
 
     casks = [
+      "brave-browser"
       "discord"
       "docker-desktop"
       "firefox"

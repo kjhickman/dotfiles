@@ -36,7 +36,7 @@
     dock.autohide-delay = 0.0;
     dock.orientation = "bottom";
     dock.persistent-apps = [
-      "/Applications/Google Chrome.app"
+      "/Applications/Brave Browser.app"
       "/Applications/Obsidian.app"
       "/Applications/Ghostty.app"
     ];
