@@ -16,6 +16,7 @@
     ripgrep
     rustup
     terraform
+    typescript
     zig
     zls
 
