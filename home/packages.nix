@@ -2,24 +2,32 @@
 
 {
   home.packages = with pkgs; [
-    awscli2
+    # general
     bat
-    claude-code
     eza
+    neovim
+    ripgrep
+
+    # cloud
+    awscli2
     flyctl
+
+    #dev
+    bun
+    deno
     gitversion
     go
-    go-task
     just
-    neovim
     nodejs_24
-    ripgrep
     rustup
     terraform
     typescript
     zig
     zls
-
     nodePackages."@angular/cli"
+
+    # llm
+    claude-code
+    ollama
   ];
 }
