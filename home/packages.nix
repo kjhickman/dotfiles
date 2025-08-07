@@ -29,5 +29,9 @@
     # llm
     claude-code
     ollama
+
+
+    # misc
+    cutechess
   ];
 }
