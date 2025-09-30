@@ -10,7 +10,7 @@
 
     initContent = ''
       export DOTNET_ROOT="$(realpath $(which dotnet))/.."
-      export PATH="$HOME/.dotnet/tools:$HOME/.cargo/bin:$PATH"
+      export PATH="$HOME/.dotnet/tools:$HOME/.cargo/bin:$HOME/.aspire/bin:$PATH"
     '';
 
     # loginExtra = lib.mkIf pkgs.stdenv.isDarwin ''
