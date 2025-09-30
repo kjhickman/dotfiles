@@ -15,7 +15,6 @@
     #dev
     bun
     deno
-    gitversion
     go
     just
     nodejs_24
