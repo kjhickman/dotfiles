@@ -14,6 +14,7 @@
 
     #dev
     bun
+    codex
     deno
     go
     just
