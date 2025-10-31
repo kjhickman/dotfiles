@@ -23,6 +23,7 @@
       alias.save = "!git add -A && git commit -m 'wip'";
       alias.undo = "reset HEAD~1 --mixed";
       alias.diffshow =  "!f() { git diff \$1 \${2-HEAD} --name-status ; }; f";
+      alias.backdate = "!f() { GIT_AUTHOR_DATE=\"$(date -d \"$1\")\" GIT_COMMITTER_DATE=\"$(date -d \"$1\")\" git commit -m \"$2\"; }; f";
 
       diff = {
         algorithm = "histogram";
