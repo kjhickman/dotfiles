@@ -3,9 +3,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "Kyle Hickman";
-    userEmail = "kyle@txhickman.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Kyle Hickman";
+        email = "kyle@txhickman.com";
+      };
       branch.sort = "-committerdate";
       column.ui = "auto";
       commit.verbose = true;
