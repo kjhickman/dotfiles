@@ -20,6 +20,7 @@
     go
     just
     nodejs_24
+    opencode
     rustup
     terraform
     typescript
