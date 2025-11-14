@@ -11,16 +11,13 @@
 
     # cloud
     awscli2
-    flyctl
 
     #dev
     bun
-    codex
     deno
     go
     just
     nodejs_24
-    opencode
     rustup
     terraform
     typescript
@@ -30,6 +27,8 @@
 
     # llm
     claude-code
+    codex
     ollama
+    opencode
   ];
 }
