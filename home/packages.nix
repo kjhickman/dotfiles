@@ -27,7 +27,7 @@
 
     # llm
     claude-code
-    codex
+    gemini-cli
     ollama
     opencode
   ];
