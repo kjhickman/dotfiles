@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./dotnet.nix
     ./fish.nix
     ./git.nix
     ./packages.nix

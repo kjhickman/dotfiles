@@ -57,4 +57,12 @@
   system.stateVersion = 5;
 
   security.pam.services.sudo_local.touchIdAuth = true;
+
+  # Create symlink for dnx
+  system.activationScripts.postActivation.text = ''
+    if [ -e /usr/local/share/dotnet/dnx ]; then
+      echo "Creating dnx symlink..."
+      ln -sfn /usr/local/share/dotnet/dnx /opt/homebrew/bin/dnx
+    fi
+  '';
 }
