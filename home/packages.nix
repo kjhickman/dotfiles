@@ -21,6 +21,7 @@
     rustup
     terraform
     typescript
+    uv
     zig
     zls
     nodePackages."@angular/cli"

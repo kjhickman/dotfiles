@@ -10,6 +10,7 @@
     };
 
     casks = [
+      "battle-net"
       "brave-browser"
       "discord"
       "docker-desktop"
