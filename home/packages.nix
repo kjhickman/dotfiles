@@ -16,6 +16,7 @@
     bun
     deno
     go
+    hugo
     just
     nodejs_24
     rustup
