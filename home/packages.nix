@@ -33,6 +33,5 @@
     github-copilot-cli
     gemini-cli
     ollama
-    opencode
   ];
 }

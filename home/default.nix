@@ -4,6 +4,7 @@
   imports = [
     ./fish.nix
     ./git.nix
+    ./opencode.nix
     ./packages.nix
     ./ssh.nix
     ./starship.nix
