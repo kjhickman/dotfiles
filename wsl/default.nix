@@ -9,10 +9,13 @@
     pkgs.docker
   ];
 
+  environment.shellAliases = {
+    nix-switch = "sudo nixos-rebuild switch --flake ~/dotfiles#wsl";
+  };
+
   # needed for VSCode remote
   programs.nix-ld = {
     enable = true;
-    package = pkgs.nix-ld-rs;
   };
 
   programs.fish.enable = true;

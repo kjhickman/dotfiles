@@ -16,6 +16,7 @@
     bun
     deno
     go
+    gh
     hugo
     just
     nodejs_24
