@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./dotnet.nix
     ./fish.nix
     ./git.nix
     ./opencode.nix

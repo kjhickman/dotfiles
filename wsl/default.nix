@@ -7,6 +7,7 @@
   environment.systemPackages = [
     pkgs.wget # needed for VSCode remote
     pkgs.docker
+    pkgs.gcc
   ];
 
   environment.shellAliases = {
