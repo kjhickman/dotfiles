@@ -12,6 +12,7 @@
     casks = [
       "battle-net"
       "brave-browser"
+      "steipete/tap/codexbar"
       "discord"
       "docker-desktop"
       "dotnet-sdk"

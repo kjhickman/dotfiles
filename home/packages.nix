@@ -30,8 +30,10 @@
 
     # llm
     claude-code
-    github-copilot-cli
-    gemini-cli
+    codex
     ollama
+
+    # misc
+    stockfish
   ];
 }
