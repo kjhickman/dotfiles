@@ -9,6 +9,9 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      cat = "bat";
+      ls = "eza";
+      tf = "terraform";
       ope = "opencode";
     };
 
