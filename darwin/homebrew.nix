@@ -12,7 +12,6 @@
     casks = [
       "battle-net"
       "brave-browser"
-      "steipete/tap/codexbar"
       "discord"
       "docker-desktop"
       "dotnet-sdk"
@@ -21,6 +20,8 @@
       "firefox"
       "font-jetbrains-mono-nerd-font"
       "font-monaspace"
+      "freac"
+      "garmin-express"
       "ghostty"
       "godot"
       "google-chrome"

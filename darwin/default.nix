@@ -24,6 +24,10 @@
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
+  environment.shellAliases = {
+    nix-switch = "sudo darwin-rebuild switch --flake ~/nix#macos";
+  };
+
   # Disable nix-darwin shell integrations
   # programs.bash.enable = false;
   # programs.fish.enable = false;

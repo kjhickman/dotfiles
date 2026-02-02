@@ -5,7 +5,7 @@
     enable = true;
 
     shellAliases = {
-      cc = "opencode";
+      ope = "opencode";
     };
 
     interactiveShellInit = ''

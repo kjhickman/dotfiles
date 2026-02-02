@@ -7,4 +7,6 @@
       theme = "catppuccin";
     };
   };
+
+  xdg.configFile."opencode/opencode.json".force = true;
 }

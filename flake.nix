@@ -30,6 +30,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
+            backupFileExtension = "bak";
             extraSpecialArgs = { inherit inputs; };
             users.kyle = { config, pkgs, ... }: {
               imports = [ ./home ];
@@ -59,6 +60,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
+            backupFileExtension = "bak";
             extraSpecialArgs = { inherit inputs; };
             users.kyle = { config, pkgs, ... }: {
               imports = [ ./home ];
