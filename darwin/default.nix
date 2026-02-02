@@ -1,39 +1,24 @@
 { pkgs, inputs, brew, ... }:
- 
+
 {
   imports = [ ./homebrew.nix ];
 
-  # Set system hostname
   networking.hostName = "dalaran";
   networking.computerName = "Kyle's MacBook Pro";
   system.defaults.smb.NetBIOSName = "dalaran";
-
-  # Installs homebrew
-  nix-homebrew = {
-    enable = true;
-    enableRosetta = true;
-    user = "kyle";
-  };
-
   system.primaryUser = "kyle";
 
+  # Nix settings
   nixpkgs.config.allowUnfree = true;
-
-  # nix.package = pkgs.nix;
-
-  # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
+  # Darwin-specific aliases
   environment.shellAliases = {
     nix-switch = "sudo darwin-rebuild switch --flake ~/nix#macos";
   };
-
-  # Disable nix-darwin shell integrations
-  # programs.bash.enable = false;
-  # programs.fish.enable = false;
-  # programs.zsh.enable = false;
   programs.zsh.enable = true;
 
+  # System defaults
   system.defaults = {
     dock.autohide = true;
     dock.autohide-time-modifier = 0.0;
@@ -53,20 +38,9 @@
     NSGlobalDomain."com.apple.keyboard.fnState" = true;
   };
 
-  # Set Git commit hash for darwin-version.
-  system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
-
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
-  system.stateVersion = 5;
-
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  # Create symlink for dnx
-  system.activationScripts.postActivation.text = ''
-    if [ -e /usr/local/share/dotnet/dnx ]; then
-      echo "Creating dnx symlink..."
-      ln -sfn /usr/local/share/dotnet/dnx /opt/homebrew/bin/dnx
-    fi
-  '';
+  # System metadata
+  system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
+  system.stateVersion = 5;
 }

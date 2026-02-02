@@ -1,6 +1,12 @@
 { inputs, ... }:
 
 {
+  nix-homebrew = {
+    enable = true;
+    enableRosetta = true;
+    user = "kyle";
+  };
+
   homebrew = {
     enable = true;
     onActivation = {
