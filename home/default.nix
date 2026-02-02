@@ -16,6 +16,10 @@ in
 
   programs.zoxide.enable = true;
 
+  home.sessionVariables = {
+    GOPATH = "$HOME/.local/share/go";
+  };
+
   home.stateVersion = "24.05";
 
   programs.home-manager.enable = true;
