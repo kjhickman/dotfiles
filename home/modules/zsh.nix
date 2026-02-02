@@ -1,6 +1,12 @@
 { lib, pkgs, ... }:
 
 {
+  home.sessionPath = [
+    "$HOME/.dotnet/tools"
+    "$HOME/.cargo/bin"
+    "$HOME/.aspire/bin"
+  ];
+
   programs.zsh = {
     enable = true;
 
@@ -16,8 +22,8 @@
     };
 
     initContent = ''
-      export DOTNET_ROOT="$(realpath $(which dotnet))/.."
-      export PATH="$HOME/.dotnet/tools:$HOME/.cargo/bin:$HOME/.aspire/bin:$PATH"
+      # Case-insensitive completion matching.
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
     '';
   };
 }
