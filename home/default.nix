@@ -1,17 +1,18 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
+let
+  moduleDir = ./modules;
+  moduleImports = builtins.map
+    (name: moduleDir + "/${name}")
+    (builtins.attrNames (lib.filterAttrs
+      (name: type: (type == "regular" || type == "symlink")
+        && lib.hasSuffix ".nix" name)
+      (builtins.readDir moduleDir)));
+in
 {
   imports = [
-    ./dotnet.nix
-    ./fish.nix
-    ./git.nix
-    ./opencode.nix
     ./packages.nix
-    ./ssh.nix
-    ./starship.nix
-    ./warp.nix
-    ./zsh.nix
-  ];
+  ] ++ moduleImports;
 
   programs.zoxide.enable = true;
 
@@ -19,4 +20,3 @@
 
   programs.home-manager.enable = true;
 }
-
