@@ -1,5 +1,5 @@
 # NixOS-WSL Info
 
-### NixOS-WSL docs
+## NixOS-WSL docs
 
-https://nix-community.github.io/NixOS-WSL/
+<https://nix-community.github.io/NixOS-WSL/>
