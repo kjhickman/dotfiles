@@ -11,7 +11,7 @@
   ];
 
   environment.shellAliases = {
-    nix-switch = "sudo nixos-rebuild switch --flake ~/dotfiles#wsl";
+    nix-switch = "sudo nixos-rebuild switch --flake ~/repos/dotfiles#wsl";
   };
 
   # needed for VSCode remote

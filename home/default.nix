@@ -19,6 +19,8 @@ in
   home.sessionVariables = {
     GOPATH = "$HOME/.local/share/go";
     CLAUDE_CONFIG_DIR = "$HOME/.config/claude"; # todo: find way to move to claudecode.nix?
+    DOTNET_CLI_HOME = "$HOME/.config";
+    BUN_INSTALL_DIR = "$HOME/.config/bun";
   };
 
   home.stateVersion = "24.05";
