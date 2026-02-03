@@ -29,7 +29,6 @@
     nodePackages."@angular/cli"
 
     # llm
-    claude-code
     codex
     ollama
 

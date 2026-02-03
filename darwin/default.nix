@@ -14,7 +14,7 @@
 
   # Darwin-specific aliases
   environment.shellAliases = {
-    nix-switch = "sudo darwin-rebuild switch --flake ~/nix#macos";
+    nix-switch = "sudo darwin-rebuild switch --flake ~/repos/dotfiles#macos";
   };
   programs.zsh.enable = true;
 
