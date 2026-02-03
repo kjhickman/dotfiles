@@ -8,6 +8,8 @@
     eza
     neovim
     ripgrep
+    tldr
+    
 
     # cloud
     awscli2
