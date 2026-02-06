@@ -9,7 +9,7 @@
     neovim
     ripgrep
     tldr
-    edit
+    msedit
 
     # cloud
     awscli2
