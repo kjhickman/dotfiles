@@ -12,9 +12,9 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = "nix-command flakes";
 
-  # Darwin-specific aliases
-  environment.shellAliases = {
-    nix-switch = "sudo darwin-rebuild switch --flake ~/repos/dotfiles#macos";
+  # Darwin-specific abbreviations
+  programs.fish.shellAbbrs = {
+    nsw = "sudo darwin-rebuild switch --flake ~/repos/dotfiles#macos";
   };
   programs.zsh.enable = true;
   programs.fish.enable = true;

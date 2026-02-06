@@ -1,5 +1,8 @@
 { lib, pkgs, ... }:
-
+let
+  sharedAliases = import ../shell/aliases.nix;
+  sharedAbbrs = import ../shell/abbrs.nix;
+in
 {
   home.sessionPath = [
     "$HOME/.dotnet/tools"
@@ -14,12 +17,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      cat = "bat";
-      ls = "eza";
-      tf = "terraform";
-      ope = "opencode";
-    };
+    shellAliases = sharedAliases.aliases // sharedAbbrs.abbrs;
 
     initContent = ''
       # Case-insensitive completion matching.

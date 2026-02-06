@@ -10,8 +10,8 @@
     pkgs.gcc
   ];
 
-  environment.shellAliases = {
-    nix-switch = "sudo nixos-rebuild switch --flake ~/repos/dotfiles#wsl";
+  programs.fish.shellAbbrs = {
+    nsw = "sudo nixos-rebuild switch --flake ~/repos/dotfiles#wsl";
   };
 
   # needed for VSCode remote
