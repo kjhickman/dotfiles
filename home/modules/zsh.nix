@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, config, ... }:
 let
   sharedAliases = import ../shell/aliases.nix;
   sharedAbbrs = import ../shell/abbrs.nix;
@@ -16,6 +16,7 @@ in
     enableVteIntegration = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    dotDir = "${config.xdg.configHome}/zsh";
 
     shellAliases = sharedAliases.aliases // sharedAbbrs.abbrs;
 

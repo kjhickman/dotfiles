@@ -14,6 +14,7 @@ in
     ./packages.nix
   ] ++ moduleImports;
 
+  xdg.enable = true;
   programs.zoxide.enable = true;
 
   home.sessionVariables = {

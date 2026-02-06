@@ -22,6 +22,7 @@
     hugo
     just
     nodejs_24
+    ollama
     rustup
     terraform
     typescript
@@ -29,10 +30,6 @@
     zig
     zls
     nodePackages."@angular/cli"
-
-    # llm
-    codex
-    ollama
 
     # misc
     stockfish
