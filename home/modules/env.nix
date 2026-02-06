@@ -24,6 +24,7 @@ in
     AWS_CONFIG_FILE = "${configHome}/aws/config";
     AWS_SHARED_CREDENTIALS_FILE = "${configHome}/aws/credentials";
     CLAUDE_CONFIG_DIR = "${configHome}/claude"; # todo: find way to move to claudecode.nix?
+    DOCKER_CONFIG = "${configHome}/docker";
     DOTNET_CLI_HOME = "${configHome}";
     BUN_INSTALL_DIR = "${configHome}/bun";
     CODEX_HOME = "${configHome}/codex";
