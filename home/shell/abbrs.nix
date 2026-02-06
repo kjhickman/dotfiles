@@ -8,8 +8,8 @@
     gl = "git log --oneline --graph --decorate";
     gco = "git switch";
     gcob = "git switch -c";
-    gcm = "!git add -A && git commit -m";
-    gsave = "!git add -A && git commit -m 'wip'";
+    gcm = "git add -A && git commit -m";
+    gsave = "git add -A && git commit -m 'wip'";
     gundo = "git reset HEAD~1 --mixed";
 
     tf = "terraform";
