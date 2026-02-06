@@ -14,17 +14,6 @@ in
     ./packages.nix
   ] ++ moduleImports;
 
-  xdg.enable = true;
-  programs.zoxide.enable = true;
-
-  home.sessionVariables = {
-    GOPATH = "$HOME/.local/share/go";
-    CLAUDE_CONFIG_DIR = "$HOME/.config/claude"; # todo: find way to move to claudecode.nix?
-    DOTNET_CLI_HOME = "$HOME/.config";
-    BUN_INSTALL_DIR = "$HOME/.config/bun";
-    CODEX_HOME = "$HOME/.config/codex";
-  };
-
   home.stateVersion = "24.05";
 
   programs.home-manager.enable = true;

@@ -19,10 +19,8 @@
     deno
     go
     gh
-    hugo
     just
     nodejs_24
-    ollama
     rustup
     terraform
     typescript

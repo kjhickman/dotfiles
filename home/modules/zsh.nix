@@ -4,12 +4,6 @@ let
   sharedAbbrs = import ../shell/abbrs.nix;
 in
 {
-  home.sessionPath = [
-    "$HOME/.dotnet/tools"
-    "$HOME/.cargo/bin"
-    "$HOME/.aspire/bin"
-  ];
-
   programs.zsh = {
     enable = true;
 
