@@ -17,6 +17,7 @@
     nix-switch = "sudo darwin-rebuild switch --flake ~/repos/dotfiles#macos";
   };
   programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   # System defaults
   system.defaults = {

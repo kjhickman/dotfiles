@@ -19,8 +19,7 @@
     enable = true;
   };
 
-  programs.zsh.enable = true;
-  users.users.kyle.shell = pkgs.zsh;
+  users.users.kyle.shell = pkgs.fish;
 
   nixpkgs.config.allowUnfree = true;
 
