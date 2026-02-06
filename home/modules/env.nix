@@ -21,6 +21,8 @@ in
     CARGO_HOME = "${dataHome}/cargo";
     DOTNET_ROOT = "${pkgs.dotnet-sdk.outPath}";
     NUGET_PACKAGES = "${cacheHome}/NuGetPackages";
+    AWS_CONFIG_FILE = "${configHome}/aws/config";
+    AWS_SHARED_CREDENTIALS_FILE = "${configHome}/aws/credentials";
     CLAUDE_CONFIG_DIR = "${configHome}/claude"; # todo: find way to move to claudecode.nix?
     DOTNET_CLI_HOME = "${configHome}";
     BUN_INSTALL_DIR = "${configHome}/bun";
