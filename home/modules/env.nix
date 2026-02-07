@@ -28,5 +28,7 @@ in
     DOTNET_CLI_HOME = "${configHome}";
     BUN_INSTALL_DIR = "${configHome}/bun";
     CODEX_HOME = "${configHome}/codex";
+
+    OPENCODE_ENABLE_EXA = "true";
   };
 }
