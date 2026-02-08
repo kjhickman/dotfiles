@@ -9,7 +9,7 @@
     gco = "git switch";
     gcob = "git switch -c";
     gca = "git commit --amend";
-    gcm = "git add -A && git commit -m";
+    gac = "git add -A && git commit -m";
     gsave = "git add -A && git commit -m 'wip'";
     gundo = "git reset HEAD~1 --mixed";
 
