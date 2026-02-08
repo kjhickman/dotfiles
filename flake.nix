@@ -31,7 +31,11 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "bak";
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = {
+              inherit inputs;
+              isDarwin = true;
+              isWsl = false;
+            };
             users.kyle = { config, pkgs, ... }: {
               imports = [ ./home ];
               home = {
@@ -61,7 +65,11 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "bak";
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = {
+              inherit inputs;
+              isDarwin = false;
+              isWsl = true;
+            };
             users.kyle = { config, pkgs, ... }: {
               imports = [ ./home ];
               home = {
