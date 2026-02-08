@@ -10,14 +10,13 @@
     pkgs.gcc
   ];
 
+  programs.fish.enable = true;
   programs.fish.shellAbbrs = {
     nsw = "sudo nixos-rebuild switch --flake ~/repos/dotfiles#wsl";
   };
 
   # needed for VSCode remote
-  programs.nix-ld = {
-    enable = true;
-  };
+  programs.nix-ld.enable = true;
 
   users.users.kyle.shell = pkgs.fish;
 
