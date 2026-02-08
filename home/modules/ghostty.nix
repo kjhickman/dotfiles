@@ -22,6 +22,10 @@ lib.mkIf (!isWsl) {
       # Font settings
       font-family = "Monaspace Neon";
       font-thicken = false;
+      font-features = [
+        "calt"
+        "liga"
+      ];
 
       # Keybindings
       keybind = "shift+enter=text:\\n";
