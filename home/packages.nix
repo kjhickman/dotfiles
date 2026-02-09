@@ -30,6 +30,7 @@
     nodePackages."@angular/cli"
 
     # misc
+    hledger
     stockfish
   ];
 }
