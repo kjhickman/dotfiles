@@ -31,6 +31,8 @@
 
     # misc
     hledger
+    hledger-ui
+    hledger-web
     stockfish
   ];
 }
