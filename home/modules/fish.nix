@@ -16,7 +16,13 @@ in
 
     functions = {
       fish_prompt = ''
-        prmt --shell none --code $status '{path:cyan} {git:purple}\n{ok:green}{fail:red} '
+        if set -q __prmt_prompt_seen
+          echo
+        else
+          set -g __prmt_prompt_seen 1
+        end
+
+        prmt --shell none --no-version --code $status '{path:cyan} {git:purple}\n{ok:green}{fail:red} '
       '';
     };
   };
