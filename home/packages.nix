@@ -7,6 +7,7 @@
     coreutils
     eza
     neovim
+    prmt
     ripgrep
     tldr
     msedit

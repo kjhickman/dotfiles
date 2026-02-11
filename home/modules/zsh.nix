@@ -17,6 +17,9 @@ in
     initContent = ''
       # Case-insensitive completion matching.
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+      setopt PROMPT_SUBST
+      PROMPT='$(prmt --shell zsh --code $? "{path:cyan} {git:purple}\n{ok:green}{fail:red} ")'
     '';
 
     loginExtra = lib.mkIf pkgs.stdenv.isDarwin ''

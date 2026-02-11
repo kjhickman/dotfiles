@@ -13,5 +13,11 @@ in
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
     '';
+
+    functions = {
+      fish_prompt = ''
+        prmt --shell none --code $status '{path:cyan} {git:purple}\n{ok:green}{fail:red} '
+      '';
+    };
   };
 }
