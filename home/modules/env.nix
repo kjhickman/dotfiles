@@ -32,5 +32,6 @@ in
 
     OPENCODE_ENABLE_EXA = "true";
     OPENCODE_EXPERIMENTAL_LSP_TOOL = "true";
+    LEDGER_FILE = "${home}/repos/ledger/master.journal";
   };
 }
