@@ -31,5 +31,6 @@ in
     CODEX_HOME = "${configHome}/codex";
 
     OPENCODE_ENABLE_EXA = "true";
+    OPENCODE_EXPERIMENTAL_LSP_TOOL = "true";
   };
 }
