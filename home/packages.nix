@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -35,5 +35,7 @@
     hledger-ui
     hledger-web
     stockfish
+  ] ++ lib.optionals pkgs.stdenv.isLinux [
+    xdg-utils
   ];
 }
