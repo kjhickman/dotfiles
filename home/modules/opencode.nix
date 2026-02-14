@@ -37,7 +37,7 @@ in
       agent.build.permission.skill = superpowersSkillPermissions;
       agent.plan.permission.skill = superpowersSkillPermissions;
 
-      agent.explore.model = "anthropic/claude-haiku-4-5";
+      agent.explore.model = "github-copilot/claude-haiku-4.5";
 
       agent.superman = {
         mode = "subagent";
