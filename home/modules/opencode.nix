@@ -1,23 +1,29 @@
 { config, lib, pkgs, ... }:
 
 let
-  superpowersSkillPermissions = {
+  superpowersSkillNames = [
+    "brainstorming"
+    "dispatching-parallel-agents"
+    "executing-plans"
+    "finishing-a-development-branch"
+    "receiving-code-review"
+    "requesting-code-review"
+    "subagent-driven-development"
+    "systematic-debugging"
+    "test-driven-development"
+    "using-git-worktrees"
+    "using-superpowers"
+    "verification-before-completion"
+    "writing-plans"
+    "writing-skills"
+  ];
+
+  superpowersSkillPermissions = lib.recursiveUpdate {
     "*" = "allow";
-    "subagent-driven-development" = "deny";
-    "verification-before-completion" = "deny";
-    "writing-skills" = "deny";
-    "receiving-code-review" = "deny";
-    "requesting-code-review" = "deny";
-    "writing-plans" = "deny";
-    "brainstorming" = "deny";
-    "finishing-a-development-branch" = "deny";
-    "executing-plans" = "deny";
-    "dispatching-parallel-agents" = "deny";
-    "using-superpowers" = "deny";
-    "systematic-debugging" = "deny";
-    "test-driven-development" = "deny";
-    "using-git-worktrees" = "deny";
-  };
+  } (lib.listToAttrs (map (skill: {
+    name = skill;
+    value = "deny";
+  }) superpowersSkillNames));
 in
 {
   programs.opencode = {
@@ -25,13 +31,22 @@ in
     settings = {
       theme = "catppuccin";
 
-      # Disallow superpowers outside of the superman agent
+      # Keep build/plan as the primary agents and deny superpowers there
+      agent.build.mode = "primary";
+      agent.plan.mode = "primary";
       agent.build.permission.skill = superpowersSkillPermissions;
       agent.plan.permission.skill = superpowersSkillPermissions;
 
+      agent.explore.model = "anthropic/claude-haiku-4-5";
+
       agent.superman = {
-        mode = "primary";
+        mode = "subagent";
         description = "Build agent with Superpowers workflow";
+        permission = {
+          skill = {
+            "*" = "allow";
+          };
+        };
         prompt = ''
           <EXTREMELY_IMPORTANT>
           You have superpowers.

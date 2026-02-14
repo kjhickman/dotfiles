@@ -20,7 +20,6 @@ in
     GOPATH = "${dataHome}/go";
     RUSTUP_HOME = "${dataHome}/rustup";
     CARGO_HOME = "${dataHome}/cargo";
-    DOTNET_ROOT = "${pkgs.dotnet-sdk.outPath}";
     NUGET_PACKAGES = "${cacheHome}/NuGetPackages";
     AWS_CONFIG_FILE = "${configHome}/aws/config";
     AWS_SHARED_CREDENTIALS_FILE = "${configHome}/aws/credentials";
