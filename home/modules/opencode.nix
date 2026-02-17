@@ -72,6 +72,12 @@ in
   };
 
   xdg.configFile."opencode/opencode.json".force = true;
+  xdg.configFile."opencode/AGENTS.md".text = ''
+    ## Global Instructions
+
+    - Do not add unnecessary comments in code.
+    - Use as many subagents as logically makes sense when working on a task.
+  '';
 
   home.activation.installSuperpowers = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     superpowers_dir="${config.home.homeDirectory}/.config/opencode/superpowers"
