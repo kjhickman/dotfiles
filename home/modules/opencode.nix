@@ -31,6 +31,8 @@ in
     settings = {
       theme = "catppuccin";
 
+      tui.scroll_acceleration.enabled = true;
+
       # Keep build/plan as the primary agents and deny superpowers there
       agent.build.mode = "primary";
       agent.plan.mode = "primary";
