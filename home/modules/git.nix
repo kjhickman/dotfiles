@@ -1,14 +1,6 @@
 { pkgs, config, ... }:
 
 {
-  programs.delta = {
-    enable = true;
-    enableGitIntegration = true;
-    options = {
-      "side-by-side" = true;
-    };
-  };
-
   programs.git = {
     enable = true;
     settings = {
@@ -31,6 +23,7 @@
       diff = {
         algorithm = "histogram";
         colorMoved = "plain";
+        external = "difft";
         mnemonicPrefix = true;
         renames = true;
       };

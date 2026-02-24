@@ -6,6 +6,7 @@
     bat
     coreutils
     eza
+    difftastic
     neovim
     prmt
     ripgrep
