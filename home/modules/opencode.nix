@@ -84,6 +84,7 @@ in
     - Do not add unnecessary comments in code.
     - Use as many subagents as logically makes sense when working on a task.
     - Use the `question` tool whenever asking the user a question.
+    - Keep SOLID principles and Clean Code in mind, but apply them pragmatically and avoid being overly strict.
   '';
 
   home.activation.installSuperpowers = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
