@@ -32,6 +32,10 @@ in
       theme = "catppuccin";
 
       tui.scroll_acceleration.enabled = true;
+      watcher.ignore = [
+        "/private/tmp/**"
+        "/tmp/**"
+      ];
 
       # Keep build/plan as the primary agents and deny superpowers there
       agent.build.mode = "primary";
