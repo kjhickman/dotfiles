@@ -11,6 +11,7 @@ in
 
   home.sessionPath = [
     "${cacheHome}/.bun/bin"
+    "${configHome}/.dotnet/tools"
     "${home}/.dotnet/tools"
     "${home}/cargo/bin"
     "${home}/.aspire/bin"
