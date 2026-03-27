@@ -10,14 +10,28 @@
     pkgs.gcc
   ];
 
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+    autoPrune.enable = true;
+  };
+
   programs.fish.enable = true;
   users.users.kyle.shell = pkgs.fish;
+  users.users.kyle.extraGroups = [ "docker" ];
   programs.fish.shellAbbrs = {
     nsw = "sudo nixos-rebuild switch --flake ~/repos/dotfiles#wsl";
   };
 
   # needed for VSCode remote
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    icu
+    openssl
+    zlib
+    curl
+    stdenv.cc.cc
+  ];
 
   nixpkgs.config.allowUnfree = true;
 
