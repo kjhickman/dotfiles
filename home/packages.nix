@@ -15,6 +15,7 @@
 
     # cloud
     awscli2
+    flyctl
 
     #dev
     bun
