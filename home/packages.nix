@@ -24,6 +24,7 @@
     gh
     just
     nodejs_24
+    playwright
     rustup
     terraform
     typescript
