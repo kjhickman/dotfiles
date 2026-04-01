@@ -31,6 +31,7 @@ in
     settings = {
       theme = "catppuccin";
 
+      tui.show_thinking = false;
       tui.scroll_acceleration.enabled = true;
       permission.external_directory = {
         "/private/tmp/**" = "allow";
