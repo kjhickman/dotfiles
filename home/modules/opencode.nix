@@ -28,6 +28,11 @@ in
 {
   programs.opencode = {
     enable = true;
+    tui = {
+      theme = "catppuccin";
+      show_thinking = false;
+      scroll_acceleration.enabled = true;
+    };
     settings = {
       provider.ollama = {
         npm = "@ai-sdk/openai-compatible";
@@ -40,10 +45,6 @@ in
         };
       };
 
-      theme = "catppuccin";
-
-      tui.show_thinking = false;
-      tui.scroll_acceleration.enabled = true;
       permission.external_directory = {
         "/private/tmp/**" = "allow";
         "/tmp/**" = "allow";

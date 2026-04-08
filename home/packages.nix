@@ -32,8 +32,6 @@
     uv
     zig
     zls
-    nodePackages."@angular/cli"
-
     # misc
     hledger
     hledger-ui
