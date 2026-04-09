@@ -8,6 +8,8 @@
       scroll_acceleration.enabled = true;
     };
     settings = {
+      theme = "catppuccin";
+
       provider.ollama = {
         npm = "@ai-sdk/openai-compatible";
         name = "Ollama";
