@@ -33,6 +33,10 @@
     };
   };
 
+  home.activation.removeOpencodeSuperpowers = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    run rm -rf $VERBOSE_ARG "${config.xdg.configHome}/opencode/superpowers"
+  '';
+
   xdg.configFile."opencode/opencode.json".force = true;
   xdg.configFile."opencode/AGENTS.md".text = ''
     ## Global Instructions
@@ -42,20 +46,4 @@
     - Use the `question` tool whenever asking the user a question.
     - Keep SOLID principles and Clean Code in mind, but apply them pragmatically and avoid being overly strict.
   '';
-
-  home.activation.installSuperpowers = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    superpowers_dir="${config.home.homeDirectory}/.config/opencode/superpowers"
-    superpowers_parent="${config.home.homeDirectory}/.config/opencode"
-
-    if [ ! -d "$superpowers_dir/.git" ]; then
-      mkdir -p "$superpowers_parent"
-      ${pkgs.git}/bin/git clone https://github.com/obra/superpowers.git "$superpowers_dir"
-    else
-      ${pkgs.git}/bin/git -C "$superpowers_dir" fetch --all --prune
-      ${pkgs.git}/bin/git -C "$superpowers_dir" pull --ff-only
-    fi
-  '';
-
-  home.file."${config.home.homeDirectory}/.config/opencode/skills/superpowers".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/opencode/superpowers/skills";
 }
