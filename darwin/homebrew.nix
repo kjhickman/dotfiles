@@ -33,6 +33,7 @@
       "google-chrome"
       "google-drive"
       "keepingyouawake"
+      "lm-studio"
       "maccy"
       "mullvad-vpn"
       "obsidian"
