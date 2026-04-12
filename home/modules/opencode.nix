@@ -4,7 +4,6 @@
     enable = true;
     tui = {
       theme = "catppuccin";
-      show_thinking = false;
       scroll_acceleration.enabled = true;
     };
     settings = {
