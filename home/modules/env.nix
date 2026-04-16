@@ -28,8 +28,6 @@ in
     DOCKER_CONFIG = "${configHome}/docker";
     DOTNET_CLI_HOME = "${configHome}";
     BUN_INSTALL_DIR = "${configHome}/bun";
-    CODEX_HOME = "${configHome}/codex";
-
     OPENCODE_ENABLE_EXA = "true";
     OPENCODE_EXPERIMENTAL_LSP_TOOL = "true";
     LEDGER_FILE = "${home}/repos/ledger/master.journal";

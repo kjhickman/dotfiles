@@ -1,10 +1,31 @@
-{ pkgs, ... }:
+{ aiAgentsInstructions, ... }:
 
 {
-  programs.codex.enable = true;
+  programs.codex = {
+    enable = true;
+    custom-instructions = aiAgentsInstructions;
+    settings = {
+      model = "gpt-5.4";
 
-  # programs.codex module currently hardcodes its configuration path to ~/.codex/config.toml
-  xdg.configFile."codex/config.toml".source = (pkgs.formats.toml { }).generate "codex-config" {
-    model = "gpt-5.2-codex";
+      features.prevent_idle_sleep = true;
+
+      tui = {
+        status_line = [
+          "model-with-reasoning"
+          "five-hour-limit"
+          "weekly-limit"
+          "context-used"
+          "current-dir"
+        ];
+        terminal_title = [
+          "spinner"
+          "project"
+          "thread"
+        ];
+      };
+
+      # Leave `tui.theme` unset so Codex keeps its built-in Catppuccin
+      # auto-selection: latte on light terminals, mocha on dark terminals.
+    };
   };
 }
