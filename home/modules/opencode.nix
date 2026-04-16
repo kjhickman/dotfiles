@@ -26,6 +26,9 @@
         "/tmp/**" = "allow";
       };
 
+      # codesearch currently broken
+      permission.codesearch = "deny";
+
       agent.build.mode = "primary";
       agent.plan.mode = "primary";
 
