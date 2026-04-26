@@ -38,6 +38,7 @@
 
   home.activation.removeOpencodeSuperpowers = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     run rm -rf $VERBOSE_ARG "${config.xdg.configHome}/opencode/superpowers"
+    run rm -rf $VERBOSE_ARG "${config.xdg.configHome}/opencode/skills/superpowers"
   '';
 
   xdg.configFile."opencode/opencode.json".force = true;

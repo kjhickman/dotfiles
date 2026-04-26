@@ -10,6 +10,7 @@
     neovim
     prmt
     ripgrep
+    sqlite
     tldr
     msedit
 
