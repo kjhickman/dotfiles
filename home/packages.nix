@@ -27,6 +27,7 @@
     nodejs_24
     ollama
     playwright
+    powershell
     rustup
     terraform
     typescript
