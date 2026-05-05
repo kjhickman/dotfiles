@@ -3,6 +3,13 @@
 {
   wsl.enable = true;
   wsl.defaultUser = "kyle";
+  wsl.wslConf.automount.mountFsTab = true;
+
+  fileSystems."/mnt/g" = {
+    device = "G:";
+    fsType = "drvfs";
+    options = [ "metadata" "uid=1000" "gid=100" "nofail" ];
+  };
 
   environment.systemPackages = [
     pkgs.wget # needed for VSCode remote
@@ -15,6 +22,8 @@
     enableOnBoot = true;
     autoPrune.enable = true;
   };
+
+  services.dbus.implementation = "dbus";
 
   programs.fish.enable = true;
   users.users.kyle.shell = pkgs.fish;
@@ -31,6 +40,35 @@
     zlib
     curl
     stdenv.cc.cc
+
+    # Needed for Bun/Playwright downloaded Chromium on NixOS/WSL.
+    alsa-lib
+    at-spi2-atk
+    at-spi2-core
+    atk
+    cairo
+    cups
+    dbus
+    expat
+    glib
+    gobject-introspection
+    libdrm
+    libGL
+    libgbm
+    libxkbcommon
+    nspr
+    nss
+    pango
+    pciutils
+    systemd
+    vulkan-loader
+    libx11
+    libxcb
+    libxcomposite
+    libxdamage
+    libxext
+    libxfixes
+    libxrandr
   ];
 
   nixpkgs.config.allowUnfree = true;
