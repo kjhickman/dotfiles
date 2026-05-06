@@ -8,7 +8,7 @@
   fileSystems."/mnt/g" = {
     device = "G:";
     fsType = "drvfs";
-    options = [ "metadata" "uid=1000" "gid=100" "nofail" ];
+    options = [ "metadata" "uid=1000" "gid=100" "nofail" "noauto" "x-systemd.automount" ];
   };
 
   environment.systemPackages = [
