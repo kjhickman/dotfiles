@@ -29,7 +29,7 @@
     playwright
     powershell
     rustup
-    terraform
+    # terraform
     typescript
     uv
     zig
