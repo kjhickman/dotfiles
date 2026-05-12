@@ -3,7 +3,7 @@
 {
   programs.codex = {
     enable = true;
-    custom-instructions = aiAgentsInstructions;
+    context = aiAgentsInstructions;
     settings = {
       model = "gpt-5.4";
 
