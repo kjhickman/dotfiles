@@ -18,6 +18,7 @@
     casks = [
       "battle-net"
       "brave-browser"
+      "devtunnel"
       "discord"
       "docker-desktop"
       "dotnet-sdk"
