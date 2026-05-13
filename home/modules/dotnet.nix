@@ -1,14 +1,14 @@
-{ config, isDarwin, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 let
   dotnetCombined = pkgs.dotnetCorePackages.combinePackages (with pkgs.dotnetCorePackages; [
-    sdk_8_0
-    sdk_9_0
-    sdk_10_0
+    sdk_8_0-bin
+    sdk_9_0-bin
+    sdk_10_0-bin
+    sdk_11_0-bin
   ]);
 in
-# Due do annoying MacOS issues, only install .NET this way on Linux systems
-lib.mkIf (!isDarwin) {
+{
   home.packages = [
     dotnetCombined
   ];
