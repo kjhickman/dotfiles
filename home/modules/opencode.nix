@@ -49,6 +49,8 @@
       # codesearch currently broken
       permission.codesearch = "deny";
 
+      permission.external_directory."~/.aspire/logs/**" = "allow";
+
       agent.build.mode = "primary";
       agent.plan.mode = "primary";
 
