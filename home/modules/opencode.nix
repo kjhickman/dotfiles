@@ -18,6 +18,12 @@
       ];
       disabled_providers = [ "opencode" ];
 
+      mcp.gh_grep = {
+        type = "remote";
+        url = "https://mcp.grep.app";
+        enabled = true;
+      };
+
       provider.openai.whitelist = [
         "gpt-5.5"
         "gpt-5.4-mini"
