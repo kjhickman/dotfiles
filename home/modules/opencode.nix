@@ -7,6 +7,37 @@
       scroll_acceleration.enabled = true;
     };
     settings = {
+      enabled_providers = [
+        "openai"
+        "github-copilot"
+        "opencode-go"
+        "google"
+        "ollama"
+      ];
+      disabled_providers = [ "opencode" ];
+
+      provider.openai.whitelist = [
+        "gpt-5.5"
+        "gpt-5.4-mini"
+      ];
+
+      provider.github-copilot.whitelist = [
+        "claude-haiku-4.5"
+        "claude-sonnet-4.6"
+        "claude-opus-4.7"
+        "gpt-5.5"
+      ];
+
+      provider.opencode-go.whitelist = [
+        "glm-5.1"
+        "kimi-k2.6"
+        "deepseek-v4-flash"
+      ];
+
+      provider.google.whitelist = [
+        "gemini-3-flash-preview"
+      ];
+
       provider.ollama = {
         npm = "@ai-sdk/openai-compatible";
         name = "Ollama";
