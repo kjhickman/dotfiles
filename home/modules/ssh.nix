@@ -5,21 +5,19 @@
     enable = true;
     enableDefaultConfig = false;
 
-    matchBlocks = {
+    settings = {
       "*" = {
-        serverAliveInterval = 60;
-        serverAliveCountMax = 3;
-        controlMaster = "auto";
-        controlPath = "~/.ssh/master-%r@%h:%p";
-        controlPersist = "10m";
+        ServerAliveInterval = 60;
+        ServerAliveCountMax = 3;
+        ControlMaster = "auto";
+        ControlPath = "~/.ssh/master-%r@%h:%p";
+        ControlPersist = "10m";
       };
       "github.com" = {
-        hostname = "github.com";
-        user = "git";
-        identityFile = "~/.ssh/github_ed25519";
-        extraOptions = {
-          PreferredAuthentications = "publickey";
-        };
+        HostName = "github.com";
+        User = "git";
+        IdentityFile = "~/.ssh/github_ed25519";
+        PreferredAuthentications = "publickey";
       };
     };
   };
