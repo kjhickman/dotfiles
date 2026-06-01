@@ -38,6 +38,7 @@
     hledger
     hledger-ui
     hledger-web
+    fastchess
     stockfish
   ] ++ lib.optionals pkgs.stdenv.isLinux [
     xdg-utils
