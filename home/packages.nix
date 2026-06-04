@@ -41,6 +41,8 @@
     fastchess
     stockfish
   ] ++ lib.optionals pkgs.stdenv.isLinux [
+    alsa-lib
+    pkg-config
     xdg-utils
   ];
 }
