@@ -5,7 +5,7 @@
     ga = "git add";
     gc = "git commit -m";
     gp = "git push";
-    gl = "git log --oneline --graph --decorate";
+    gl = "git log --graph --decorate";
     gco = "git switch";
     gcob = "git switch -c";
     gca = "git commit --amend";
