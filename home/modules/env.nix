@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, ... }:
 let
   home = config.home.homeDirectory;
   configHome = config.xdg.configHome;
@@ -13,7 +13,7 @@ in
     "${cacheHome}/.bun/bin"
     "${configHome}/.dotnet/tools"
     "${home}/.dotnet/tools"
-    "${dataHome}/cargo/bin"
+    "${home}/cargo/bin"
     "${home}/.aspire/bin"
   ];
 
@@ -31,6 +31,5 @@ in
     OPENCODE_ENABLE_EXA = "true";
     OPENCODE_EXPERIMENTAL_LSP_TOOL = "true";
     LEDGER_FILE = "${home}/repos/ledger/master.journal";
-    PKG_CONFIG_PATH = "${pkgs.alsa-lib.dev}/lib/pkgconfig";
   };
 }
