@@ -7,13 +7,17 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     nixos-wsl = { url = "github:nix-community/nixos-wsl"; };
+    ponytail = {
+      url = "github:DietrichGebert/ponytail/v4.7.0";
+      flake = false;
+    };
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, nixos-wsl }: {
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, nixos-wsl, ... }: {
     darwinConfigurations."macos" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       specialArgs = { inherit inputs; };

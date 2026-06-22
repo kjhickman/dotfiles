@@ -1,4 +1,4 @@
-{ aiAgentsInstructions, config, lib, pkgs, ... }:
+{ aiAgentsInstructions, inputs, config, lib, pkgs, ... }:
 {
   programs.opencode = {
     enable = true;
@@ -23,6 +23,10 @@
         url = "https://mcp.grep.app";
         enabled = true;
       };
+
+      plugin = [
+        "${inputs.ponytail}/.opencode/plugins/ponytail.mjs"
+      ];
 
       provider.openai.whitelist = [
         "gpt-5.5"
@@ -60,4 +64,8 @@
 
   xdg.configFile."opencode/opencode.json".force = true;
   xdg.configFile."opencode/AGENTS.md".text = aiAgentsInstructions;
+  xdg.configFile."opencode/command" = {
+    source = "${inputs.ponytail}/.opencode/command";
+    recursive = true;
+  };
 }
