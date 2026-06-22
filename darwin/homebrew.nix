@@ -27,7 +27,6 @@
       "freac"
       "garmin-express"
       "ghostty"
-      "godot-mono"
       "google-chrome"
       "google-drive"
       "keepingyouawake"
