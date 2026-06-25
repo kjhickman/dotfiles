@@ -55,8 +55,12 @@
 
       permission.external_directory."~/.aspire/logs/**" = "allow";
 
+      agent.build.color = "secondary";
+      agent.plan.color = "accent";
+
       agent.ask = {
         mode = "primary";
+        color = "info";
         permission.edit = "deny";
         prompt = ''
           You are in Ask mode. Answer the user's question directly.
