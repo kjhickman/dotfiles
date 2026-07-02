@@ -8,6 +8,7 @@
     eza
     difftastic
     neovim
+    nixd
     prmt
     ripgrep
     sqlite

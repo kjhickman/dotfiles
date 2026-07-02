@@ -41,6 +41,7 @@
       "thaw"
       "visual-studio-code"
       # "vlc"
+      "zed"
       "zoom"
     ];
   };
