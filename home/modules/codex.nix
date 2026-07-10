@@ -5,7 +5,7 @@
     enable = true;
     context = aiAgentsInstructions;
     settings = {
-      model = "gpt-5.5";
+      model = "gpt-5.6-terra";
       web_search = "live";
 
       mcp_servers.gh_grep = {

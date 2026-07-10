@@ -29,20 +29,20 @@
       ];
 
       provider.openai.whitelist = [
-        "gpt-5.5"
-        "gpt-5.4-mini"
+        "gpt-5.6-sol"
+        "gpt-5.6-terra"
+        "gpt-5.6-luna"
       ];
 
       provider.github-copilot.whitelist = [
         "claude-haiku-4.5"
-        "claude-sonnet-4.6"
         "claude-opus-4.8"
-        "gpt-5.5"
+        "claude-fable-5"
       ];
 
       provider.opencode-go.whitelist = [
-        "glm-5.1"
-        "kimi-k2.6"
+        "glm-5.2"
+        "kimi-k2.7"
         "deepseek-v4-flash"
       ];
 
