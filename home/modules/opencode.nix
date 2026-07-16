@@ -53,11 +53,13 @@
       permission.codesearch = "deny";
 
       permission.edit."/nix/store/**" = "deny";
+      permission.edit."${config.home.homeDirectory}/.cargo/**" = "deny";
       permission.edit."${config.xdg.dataHome}/cargo/**" = "deny";
       permission.edit."${config.xdg.cacheHome}/NuGetPackages/**" = "deny";
 
       permission.external_directory."~/.aspire/logs/**" = "allow";
       permission.external_directory."/nix/store/**" = "allow";
+      permission.external_directory."${config.home.homeDirectory}/.cargo/**" = "allow";
       permission.external_directory."${config.xdg.dataHome}/cargo/**" = "allow";
       permission.external_directory."${config.xdg.cacheHome}/NuGetPackages/**" = "allow";
 
