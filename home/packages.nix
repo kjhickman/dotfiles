@@ -30,6 +30,8 @@
     playwright
     powershell
     rustup
+    selene
+    stylua
     # terraform
     typescript
     uv
