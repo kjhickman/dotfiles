@@ -38,12 +38,16 @@
         "claude-haiku-4.5"
         "claude-opus-4.8"
         "claude-fable-5"
+        "gpt-5.6-sol"
+        "gpt-5.6-terra"
+        "gpt-5.6-luna"
       ];
 
       provider.opencode-go.whitelist = [
+        "grok-4.5"
+        "kimi-k3"
         "glm-5.2"
-        "kimi-k2.7"
-        "deepseek-v4-flash"
+        "deepseek-v4-pro"
       ];
 
       provider.google.whitelist = [
