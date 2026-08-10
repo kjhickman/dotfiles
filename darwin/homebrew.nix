@@ -21,7 +21,6 @@
       "devtunnel"
       "discord"
       "docker-desktop"
-      "firefox"
       "font-jetbrains-mono-nerd-font"
       "font-monaspace"
       "freac"
