@@ -18,7 +18,6 @@
     casks = [
       "battle-net"
       "brave-browser"
-      "devtunnel"
       "discord"
       "docker-desktop"
       "font-jetbrains-mono-nerd-font"
@@ -40,7 +39,6 @@
       "thaw"
       "visual-studio-code"
       # "vlc"
-      "zed"
       "zoom"
     ];
   };
