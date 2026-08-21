@@ -14,6 +14,6 @@
     gundo = "git reset HEAD~1 --mixed";
 
     tf = "terraform";
-    oc = "opencode";
+    oc = "opencode2";
   };
 }
