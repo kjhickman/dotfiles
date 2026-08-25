@@ -28,9 +28,6 @@
       "google-chrome"
       "google-drive"
       "jetbrains-toolbox"
-      "keepingyouawake"
-      "lm-studio"
-      "maccy"
       "mullvad-vpn"
       "obsidian"
       "qbittorrent"
@@ -38,6 +35,7 @@
       "steam"
       "thaw"
       "visual-studio-code"
+      "vorssaint"
       # "vlc"
       "zoom"
     ];
