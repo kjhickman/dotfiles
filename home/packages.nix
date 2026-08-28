@@ -33,6 +33,7 @@
     selene
     stylua
     # terraform
+    opentofu
     typescript
     uv
     zig
