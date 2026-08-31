@@ -25,6 +25,7 @@
     go
     gh
     just
+    k6
     nodejs_24
     ollama
     playwright
