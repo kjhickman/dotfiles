@@ -15,5 +15,6 @@
 
     tf = "terraform";
     oc = "opencode2";
+    agy = "agy --dangerously-skip-permissions";
   };
 }
