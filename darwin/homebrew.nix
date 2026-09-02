@@ -16,6 +16,7 @@
     };
 
     casks = [
+      "antigravity"
       "battle-net"
       "brave-browser"
       "discord"

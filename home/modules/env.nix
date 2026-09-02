@@ -10,6 +10,7 @@ in
   programs.zoxide.enable = true;
 
   home.sessionPath = [
+    "${home}/.local/bin"
     "${cacheHome}/.bun/bin"
     "${configHome}/.dotnet/tools"
     "${home}/.dotnet/tools"
