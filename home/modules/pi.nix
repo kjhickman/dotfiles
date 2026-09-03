@@ -1,0 +1,36 @@
+{ config, lib, pkgs, ... }:
+
+let
+  settingsFile = "${config.home.homeDirectory}/.pi/agent/settings.json";
+  managedSettingsFile = pkgs.writeText "pi-settings.json" (builtins.toJSON {
+    editorPaddingX = 3;
+    theme = "dark";
+  });
+  updateSettings = pkgs.writeShellScript "update-pi-settings" ''
+    set -euo pipefail
+
+    settings_file=$1
+    settings_dir="$(dirname "$settings_file")"
+    mkdir -p "$settings_dir"
+
+    temporary_file="$(mktemp "$settings_file.tmp.XXXXXX")"
+    trap 'rm -f "$temporary_file"' EXIT
+
+    if [[ -f "$settings_file" ]]; then
+      ${lib.getExe pkgs.jq} -s '
+        (.[0] | { lastChangelogVersion, trackingId }
+          | with_entries(select(.value != null))) * .[1]
+      ' "$settings_file" ${managedSettingsFile} > "$temporary_file"
+    else
+      cp ${managedSettingsFile} "$temporary_file"
+    fi
+
+    chmod 600 "$temporary_file"
+    mv "$temporary_file" "$settings_file"
+  '';
+in
+{
+  home.activation.piSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    run ${updateSettings} ${lib.escapeShellArg settingsFile}
+  '';
+}
