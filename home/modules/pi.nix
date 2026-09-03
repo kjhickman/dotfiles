@@ -3,6 +3,8 @@
 let
   settingsFile = "${config.home.homeDirectory}/.pi/agent/settings.json";
   managedSettingsFile = pkgs.writeText "pi-settings.json" (builtins.toJSON {
+    defaultProvider = "openai-codex";
+    defaultModel = "gpt-5.6-sol";
     defaultTools = [
       "read"
       "bash"
