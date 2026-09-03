@@ -12,6 +12,12 @@ let
       "find"
       "ls"
     ];
+    packages = [
+      "npm:@juicesharp/rpiv-todo@2.9.0"
+      "npm:@juicesharp/rpiv-ask-user-question@2.9.0"
+      "npm:pi-subagents@0.64.0"
+      "npm:pi-web-access@0.27.0"
+    ];
     quietStartup = true;
     theme = "dark";
   });
