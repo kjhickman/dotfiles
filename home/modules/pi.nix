@@ -3,7 +3,16 @@
 let
   settingsFile = "${config.home.homeDirectory}/.pi/agent/settings.json";
   managedSettingsFile = pkgs.writeText "pi-settings.json" (builtins.toJSON {
-    editorPaddingX = 3;
+    defaultTools = [
+      "read"
+      "bash"
+      "edit"
+      "write"
+      "grep"
+      "find"
+      "ls"
+    ];
+    quietStartup = true;
     theme = "dark";
   });
   updateSettings = pkgs.writeShellScript "update-pi-settings" ''
