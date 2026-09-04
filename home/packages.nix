@@ -1,5 +1,13 @@
 { pkgs, lib, ... }:
 
+let
+  prmt = pkgs.prmt.overrideAttrs (oldAttrs: {
+    checkFlags = (oldAttrs.checkFlags or [ ]) ++ lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
+      "--skip=modules::path::tests::relative_path_inside_home_renders_tilde"
+      "--skip=modules::path::tests::relative_path_with_shared_prefix_is_not_tilde"
+    ];
+  });
+in
 {
   home.packages = with pkgs; [
     # general
@@ -45,7 +53,7 @@
     hledger-web
     fastchess
     stockfish
-  ] ++ lib.optionals pkgs.stdenv.isLinux [
+  ] ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
     xdg-utils
   ];
 }

@@ -22,7 +22,7 @@ in
       PROMPT='$(prmt --shell zsh --code $? "{path:cyan} {git:purple}\n{ok:green}{fail:red} ")'
     '';
 
-    loginExtra = lib.mkIf pkgs.stdenv.isDarwin ''
+    loginExtra = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin ''
       # Non-POSIX-compliant shells (for example, fish) should not be set as user
       # login shell. Exec said shell here as a workaround if desired.
       if [[ $(ps -p $PPID -o comm=) != "fish" && -z $ZSH_EXECUTION_STRING ]]; then
