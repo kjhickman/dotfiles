@@ -72,7 +72,17 @@ let
 
     Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
-    ## 5. Meta-Guidelines
+    ## 5. Mandatory Post-Change Review
+
+    Before completing any task that changed implementation or configuration code:
+    - Spawn a read-only subagent and explicitly instruct it to load and follow the `complexity-review` skill against the current diff.
+    - Evaluate its findings and apply only valid simplifications yourself.
+    - If accepted findings cause further code edits, repeat the review on the resulting diff.
+    - Stop when the reviewer reports that the diff is lean or when all remaining findings are intentionally rejected. Briefly report any rejected findings.
+
+    Documentation-only and read-only tasks do not require this review.
+
+    ## 6. Meta-Guidelines
 
     - Use as many subagents as logically makes sense when working on a task.
     - Use the relevant tool whenever asking the user a question.
