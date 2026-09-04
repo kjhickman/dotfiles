@@ -19,6 +19,7 @@ let
       "npm:@juicesharp/rpiv-ask-user-question@2.9.0"
       "npm:@narumitw/pi-btw@0.57.0"
       "npm:@narumitw/pi-plan-mode@0.56.0"
+      "npm:@zenspc/pi-pstack@0.5.0"
       "npm:pi-catppuccin@0.1.0"
       "npm:pi-subagents@0.64.0"
       "npm:pi-web-access@0.27.0"
