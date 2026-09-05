@@ -1,4 +1,4 @@
-{ aiAgentsInstructions, config, lib, pkgs, ... }:
+{ aiAgentsInstructions, generalCodeReviewInstructions, config, lib, pkgs, ... }:
 
 let
   settingsFile = "${config.home.homeDirectory}/.pi/agent/settings.json";
@@ -52,6 +52,22 @@ let
 in
 {
   home.file.".pi/agent/AGENTS.md".text = aiAgentsInstructions;
+  home.file.".pi/agent/agents/code-reviewer.md".text = ''
+    ---
+    name: code-reviewer
+    description: Reviews code changes for concrete correctness and delivery risks.
+    thinking: high
+    tools: read, grep, find, ls
+    systemPromptMode: replace
+    inheritProjectContext: true
+    inheritGlobalContext: false
+    inheritSkills: false
+    defaultContext: fresh
+    acceptanceRole: read-only
+    ---
+
+    ${generalCodeReviewInstructions}
+  '';
 
   home.activation.piSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     run ${updateSettings} ${lib.escapeShellArg settingsFile}

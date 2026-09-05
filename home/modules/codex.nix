@@ -1,4 +1,4 @@
-{ aiAgentsInstructions, ... }:
+{ aiAgentsInstructions, generalCodeReviewInstructions, ... }:
 
 {
   programs.codex = {
@@ -40,9 +40,7 @@
     sandbox_mode = "read-only"
 
     developer_instructions = """
-    Review code for correctness, security, behavior regressions, architecture risks, and missing tests.
-    Do not edit files.
-    Lead with findings, include file and line references, and state explicitly when no issues are found.
+    ${generalCodeReviewInstructions}
     """
   '';
 

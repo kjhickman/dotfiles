@@ -8,6 +8,24 @@ let
       (name: type: (type == "regular" || type == "symlink")
         && lib.hasSuffix ".nix" name)
       (builtins.readDir moduleDir)));
+  generalCodeReviewInstructions = ''
+    Review the exact supplied diff against the task intent and repository instructions.
+
+    Check for correctness, security, behavior regressions, API and interface compatibility, material performance risks, architecture and maintainability risks, and missing or inadequate tests.
+
+    Report only concrete, evidence-backed issues introduced or made reachable by the diff. Omit speculative concerns and style-only feedback. Leave findings solely about unnecessary complexity to the separate `complexity-review` pass.
+
+    Classify every finding as P0, P1, or P2. For each finding, include the file and line reference, evidence, and the smallest corrective action.
+
+    End with exactly one of:
+    - `Merge verdict: BLOCK`
+    - `Merge verdict: OK`
+    - `Merge verdict: OK with notes`
+
+    If no finding qualifies, say `No issues found.` before the verdict.
+
+    Do not edit files, apply fixes, or run tests, builds, formatters, or any other potentially state-changing validation. The parent agent is responsible for applying findings and running validation.
+  '';
   aiAgentsInstructions = ''
     ## Global Instructions
 
@@ -75,12 +93,16 @@ let
     ## 5. Mandatory Post-Change Review
 
     Before completing any task that changed implementation or configuration code:
-    - Spawn a read-only subagent and explicitly instruct it to load and follow the `complexity-review` skill against the current diff.
-    - Evaluate its findings and apply only valid simplifications yourself.
-    - If accepted findings cause further code edits, repeat the review on the resulting diff.
-    - Stop when the reviewer reports that the diff is lean or when all remaining findings are intentionally rejected. Briefly report any rejected findings.
+    - Spawn two independent read-only subagents in parallel when the harness supports parallel delegation. If it does not, run the same two reviews sequentially.
+    - Give both reviewers the task intent and the same current diff. If a reviewer has no Git or shell tools, include the diff directly in its prompt or provide an exact readable diff artifact plus the changed-file list.
+    - The first subagent must use the configured general-purpose code reviewer (`code-reviewer` in Pi, `code_reviewer` in Codex, or `code-review` in OpenCode).
+    - The second subagent must explicitly load and follow the `complexity-review` skill against that diff.
+    - Neither reviewer may edit files or apply fixes.
+    - Evaluate both result sets and apply only valid findings yourself.
+    - If any accepted finding causes code edits, rerun both reviewers in parallel against the resulting diff, regardless of which reviewer found the issue.
+    - Stop when the general reviewer has no unresolved valid findings and the complexity reviewer reports the diff lean, or when all remaining findings are intentionally rejected. Briefly report rejected findings from either reviewer.
 
-    Documentation-only and read-only tasks do not require this review.
+    Documentation-only and read-only tasks do not require these reviews.
 
     ## 6. Meta-Guidelines
 
@@ -91,7 +113,9 @@ let
   '';
 in
 {
-  _module.args.aiAgentsInstructions = aiAgentsInstructions;
+  _module.args = {
+    inherit aiAgentsInstructions generalCodeReviewInstructions;
+  };
 
   imports = [
     ./packages.nix
