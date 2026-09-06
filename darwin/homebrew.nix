@@ -19,6 +19,7 @@
       "antigravity"
       "battle-net"
       "brave-browser"
+      "cursor"
       "discord"
       "docker-desktop"
       "font-jetbrains-mono-nerd-font"
