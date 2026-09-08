@@ -14,11 +14,11 @@
 
     tui = {
       status_line = [
+        "current-dir"
         "model-with-reasoning"
+        "context-used"
         "five-hour-limit"
         "weekly-limit"
-        "context-used"
-        "current-dir"
       ];
       terminal_title = [
         "spinner"
