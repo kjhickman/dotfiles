@@ -90,27 +90,13 @@ let
 
     Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
-    ## 5. Mandatory Post-Change Review
-
-    Before completing any task that changed implementation or configuration code:
-    - Spawn two independent read-only subagents in parallel when the harness supports parallel delegation. If it does not, run the same two reviews sequentially.
-    - Give both reviewers the task intent and the same current diff. If a reviewer has no Git or shell tools, include the diff directly in its prompt or provide an exact readable diff artifact plus the changed-file list.
-    - The first subagent must use the configured general-purpose code reviewer (`code-reviewer` in Pi, `code_reviewer` in Codex, or `code-review` in OpenCode).
-    - The second subagent must explicitly load and follow the `complexity-review` skill against that diff.
-    - Neither reviewer may edit files or apply fixes.
-    - Evaluate both result sets and apply only valid findings yourself.
-    - If any accepted finding causes code edits, rerun both reviewers in parallel against the resulting diff, regardless of which reviewer found the issue.
-    - Stop when the general reviewer has no unresolved valid findings and the complexity reviewer reports the diff lean, or when all remaining findings are intentionally rejected. Briefly report rejected findings from either reviewer.
-
-    Documentation-only and read-only tasks do not require these reviews.
-
-    ## 6. Meta-Guidelines
+    ## 5. Meta-Guidelines
 
     - Use as many subagents as logically makes sense when working on a task.
     - Use the relevant tool whenever asking the user a question.
 
     These guidelines are working if: fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
-  '';
+    '';
 in
 {
   _module.args = {
