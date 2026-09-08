@@ -14,7 +14,6 @@
 
     tui = {
       status_line = [
-        "current-dir"
         "model-with-reasoning"
         "context-used"
         "five-hour-limit"
@@ -22,11 +21,11 @@
       ];
       terminal_title = [
         "spinner"
+        "app-name"
         "project"
-        "thread"
       ];
 
-      # Leave `tui.theme` unset so Codex keeps its built-in Catppuccin
+      # Leave `tui.theme` unset
     };
   };
 }
