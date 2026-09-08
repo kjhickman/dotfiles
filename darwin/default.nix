@@ -1,7 +1,10 @@
 { pkgs, inputs, brew, ... }:
 
 {
-  imports = [ ./homebrew.nix ];
+  imports = [
+    ../system/codex.nix
+    ./homebrew.nix
+  ];
 
   networking.hostName = "dalaran";
   networking.computerName = "Kyle's MacBook Pro";

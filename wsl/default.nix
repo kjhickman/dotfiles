@@ -1,6 +1,8 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
+  imports = [ ../system/codex.nix ];
+
   wsl.enable = true;
   wsl.defaultUser = "kyle";
   wsl.wslConf.automount.mountFsTab = true;
