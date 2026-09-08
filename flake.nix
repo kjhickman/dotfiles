@@ -11,6 +11,10 @@
       url = "github:DietrichGebert/ponytail/v4.7.0";
       flake = false;
     };
+    workflow = {
+      url = "git+ssh://git@github.com/kjhickman/workflow.git?ref=main";
+      flake = false;
+    };
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";

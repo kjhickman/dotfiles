@@ -152,7 +152,25 @@
         "nix-homebrew": "nix-homebrew",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs",
-        "ponytail": "ponytail"
+        "ponytail": "ponytail",
+        "workflow": "workflow"
+      }
+    },
+    "workflow": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788902763,
+        "narHash": "sha256-sQoZqus1YTt4ANFVTuVLsNmFi6KDZKJG0k1eSjkuQlI=",
+        "ref": "main",
+        "rev": "049b39017233b952b6239cd13bf0830c2d14e0ff",
+        "revCount": 1,
+        "type": "git",
+        "url": "ssh://git@github.com/kjhickman/workflow.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/kjhickman/workflow.git"
       }
     }
   },
