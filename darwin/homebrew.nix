@@ -19,6 +19,7 @@
       "antigravity"
       "battle-net"
       "brave-browser"
+      "chatgpt"
       "cursor"
       "discord"
       "docker-desktop"
