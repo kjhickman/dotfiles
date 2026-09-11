@@ -34,6 +34,7 @@ in
     gh
     just
     k6
+    lua5_1
     nodejs_24
     ollama
     playwright
