@@ -1,14 +1,8 @@
-{ aiAgentsInstructions, inputs, config, lib, pkgs, ... }:
+{ aiAgentsInstructions, ... }:
 {
   programs.opencode = {
     enable = true;
-    tui = {
-      theme = "catppuccin";
-      scroll_acceleration.enabled = true;
-    };
     settings = {
-      lsp = true;
-
       enabled_providers = [
         "openai"
         "github-copilot"
@@ -17,18 +11,18 @@
       ];
       disabled_providers = [ "opencode" ];
 
-      plugin = [
-        "${inputs.ponytail}/.opencode/plugins/ponytail.mjs"
-      ];
+      agents.build.color = "#b4befe";
+      agents.plan.color = "#cba6f7";
 
-      agent.build.color = "secondary";
-      agent.plan.color = "accent";
-
-      agent.ask = {
+      agents.ask = {
         mode = "primary";
-        color = "info";
-        permission.edit = "deny";
-        prompt = ''
+        color = "#89b4fa";
+        permissions = [{
+          action = "edit";
+          resource = "*";
+          effect = "deny";
+        }];
+        system = ''
           You are in Ask mode. Answer the user's question directly.
 
           Do not edit files, modify system state, or form an implementation plan unless the user explicitly asks for one.
@@ -39,9 +33,20 @@
   };
 
   xdg.configFile."opencode/opencode.json".force = true;
-  xdg.configFile."opencode/AGENTS.md".text = aiAgentsInstructions;
-  xdg.configFile."opencode/command" = {
-    source = "${inputs.ponytail}/.opencode/command";
-    recursive = true;
+  xdg.configFile."opencode/cli.json" = {
+    force = true;
+    text = builtins.toJSON {
+      "$schema" = "https://opencode.ai/v2/cli.json";
+      theme.name = "catppuccin";
+      scroll.acceleration = true;
+      diffs.wrap = "word";
+      session = {
+        sidebar = "auto";
+        scrollbar = true;
+        thinking = "hide";
+      };
+      animations = true;
+    };
   };
+  xdg.configFile."opencode/AGENTS.md".text = aiAgentsInstructions;
 }
