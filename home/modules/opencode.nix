@@ -37,6 +37,7 @@
     force = true;
     text = builtins.toJSON {
       "$schema" = "https://opencode.ai/v2/cli.json";
+      plugins = [ "opencode-bytheway@0.8.1" ];
       theme.name = "catppuccin";
       scroll.acceleration = true;
       diffs.wrap = "word";
