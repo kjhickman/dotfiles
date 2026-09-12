@@ -1,4 +1,4 @@
-{ aiAgentsInstructions, generalCodeReviewInstructions, ... }:
+{ aiAgentsInstructions, ... }:
 
 {
   programs.codex = {

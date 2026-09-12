@@ -8,24 +8,6 @@ let
       (name: type: (type == "regular" || type == "symlink")
         && lib.hasSuffix ".nix" name)
       (builtins.readDir moduleDir)));
-  generalCodeReviewInstructions = ''
-    Review the exact supplied diff against the task intent and repository instructions.
-
-    Check for correctness, security, behavior regressions, API and interface compatibility, material performance risks, architecture and maintainability risks, and missing or inadequate tests.
-
-    Report only concrete, evidence-backed issues introduced or made reachable by the diff. Omit speculative concerns and style-only feedback. Leave findings solely about unnecessary complexity to the separate `complexity-review` pass.
-
-    Classify every finding as P0, P1, or P2. For each finding, include the file and line reference, evidence, and the smallest corrective action.
-
-    End with exactly one of:
-    - `Merge verdict: BLOCK`
-    - `Merge verdict: OK`
-    - `Merge verdict: OK with notes`
-
-    If no finding qualifies, say `No issues found.` before the verdict.
-
-    Do not edit files, apply fixes, or run tests, builds, formatters, or any other potentially state-changing validation. The parent agent is responsible for applying findings and running validation.
-  '';
   aiAgentsInstructions = ''
     ## Global Instructions
 
@@ -100,7 +82,7 @@ let
 in
 {
   _module.args = {
-    inherit aiAgentsInstructions generalCodeReviewInstructions;
+    inherit aiAgentsInstructions;
   };
 
   imports = [
