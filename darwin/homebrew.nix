@@ -36,7 +36,6 @@
       "qbittorrent"
       "slack"
       "steam"
-      "thaw"
       "visual-studio-code"
       "vorssaint"
       # "vlc"
