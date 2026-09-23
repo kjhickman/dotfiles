@@ -14,7 +14,7 @@ in
     "${cacheHome}/.bun/bin"
     "${configHome}/.dotnet/tools"
     "${home}/.dotnet/tools"
-    "${home}/cargo/bin"
+    "${dataHome}/cargo/bin"
     "${home}/.aspire/bin"
   ];
 
