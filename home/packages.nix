@@ -35,6 +35,7 @@ in
     just
     k6
     lua5_1
+    lua51Packages.busted
     nodejs_24
     ollama
     playwright
