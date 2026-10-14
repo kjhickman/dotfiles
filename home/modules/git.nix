@@ -15,6 +15,7 @@
       core.editor = "edit";
       core.autocrlf = "input";
       core.excludesfile = "~/.gitignore";
+      core.fileMode = false;
       help.autocorrect = "prompt";
       init.defaultBranch = "main";
       tag.sort = "version:refname";

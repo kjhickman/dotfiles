@@ -34,8 +34,11 @@ in
     gh
     just
     k6
-    lua5_1
-    lua51Packages.busted
+    (lua5_1.withPackages (luaPackages: with luaPackages; [
+      busted
+      luabitop
+      luacheck
+    ]))
     nodejs_24
     ollama
     playwright
