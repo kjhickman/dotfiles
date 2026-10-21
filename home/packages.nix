@@ -25,6 +25,7 @@ in
 
     # cloud
     awscli2
+    cf
     flyctl
 
     #dev
