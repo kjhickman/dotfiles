@@ -8,6 +8,7 @@
         "github-copilot"
         "opencode-go"
         "google"
+        "claude-agent"
       ];
       disabled_providers = [ "opencode" ];
 
