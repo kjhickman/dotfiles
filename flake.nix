@@ -12,7 +12,7 @@
       flake = false;
     };
     ponytail = {
-      url = "github:DietrichGebert/ponytail";
+      url = "github:DietrichGebert/ponytail/v4.13.0";
       flake = false;
     };
 
