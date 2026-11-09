@@ -7,10 +7,6 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     nixos-wsl = { url = "github:nix-community/nixos-wsl"; };
-    workflow = {
-      url = "git+ssh://git@github.com/kjhickman/workflow.git?ref=main";
-      flake = false;
-    };
     ponytail = {
       url = "github:DietrichGebert/ponytail/v4.13.0";
       flake = false;

@@ -1,4 +1,4 @@
-{ aiAgentsInstructions, config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 let
   settingsFile = "${config.home.homeDirectory}/.pi/agent/settings.json";
@@ -51,7 +51,6 @@ let
   '';
 in
 {
-  home.file.".pi/agent/AGENTS.md".text = aiAgentsInstructions;
   home.activation.piSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     run ${updateSettings} ${lib.escapeShellArg settingsFile}
   '';

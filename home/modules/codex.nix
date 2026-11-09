@@ -1,8 +1,3 @@
-{ aiAgentsInstructions, ... }:
-
 {
-  programs.codex = {
-    enable = true;
-    context = aiAgentsInstructions;
-  };
+  programs.codex.enable = true;
 }
