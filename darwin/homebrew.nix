@@ -33,6 +33,7 @@
       "jetbrains-toolbox"
       "mullvad-vpn"
       "obsidian"
+      "opencode-desktop"
       "qbittorrent"
       "slack"
       "steam"
