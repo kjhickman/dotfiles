@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   programs.opencode = {
     enable = true;
@@ -11,17 +13,41 @@
       ];
       disabled_providers = [ "opencode" ];
 
+      mcp.servers.browse = {
+        type = "local";
+        command = [
+          "${config.home.homeDirectory}/.local/bin/browse"
+          "mcp"
+        ];
+        cwd = "~";
+        pool = true;
+        environment.OPENCODE_BROWSER_RUNTIME = "auto-update";
+      };
+
+      permissions = [{
+        action = "browse_*";
+        resource = "*";
+        effect = "ask";
+      }];
+
       agents.build.color = "#b4befe";
       agents.plan.color = "#cba6f7";
 
       agents.ask = {
         mode = "primary";
         color = "#89b4fa";
-        permissions = [{
-          action = "edit";
-          resource = "*";
-          effect = "deny";
-        }];
+        permissions = [
+          {
+            action = "edit";
+            resource = "*";
+            effect = "deny";
+          }
+          {
+            action = "browse_*";
+            resource = "*";
+            effect = "deny";
+          }
+        ];
         system = ''
           You are in Ask mode. Answer the user's question directly.
 
