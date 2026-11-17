@@ -5,6 +5,8 @@
   home.file.".agents/skills/show-me".source = ../skills/show-me;
   # Vendored prune-tests from https://github.com/caldoai/skills/tree/main/skills/prune-tests
   home.file.".agents/skills/prune-tests".source = ../skills/prune-tests;
+  # Vendored untangle-codebase from https://github.com/caldoai/skills/tree/main/skills/untangle-codebase
+  home.file.".agents/skills/untangle-codebase".source = ../skills/untangle-codebase;
   home.file.".agents/skills/ponytail-review".source = "${inputs.ponytail}/skills/ponytail-review";
   home.file.".agents/skills/ponytail-audit".source = "${inputs.ponytail}/skills/ponytail-audit";
 }
