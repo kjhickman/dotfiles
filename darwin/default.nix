@@ -31,7 +31,7 @@
     dock.persistent-apps = [
       "/Applications/Google Chrome.app"
       "/Applications/Obsidian.app"
-      "/Applications/Ghostty.app"
+      "/Applications/Rex.app"
     ];
     dock.show-recents = false;
     finder.FXPreferredViewStyle = "clmv";
@@ -40,6 +40,7 @@
     NSGlobalDomain.InitialKeyRepeat = 15;
     NSGlobalDomain.KeyRepeat = 1;
     NSGlobalDomain."com.apple.keyboard.fnState" = true;
+    CustomUserPreferences."com.superlogical.rex"."Workspace.terminalFontName" = "Monaspace Neon";
   };
 
   security.pam.services.sudo_local.touchIdAuth = true;

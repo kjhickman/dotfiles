@@ -1,0 +1,3 @@
+-- https://www.superlogical.com/rex/docs/customize/config
+-- Add bindings here, then run Reload Config from Rex's command palette.
+-- rex.bind("cmd+d", "pane.split", { direction = "right" })
