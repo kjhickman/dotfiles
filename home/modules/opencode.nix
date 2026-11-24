@@ -1,6 +1,11 @@
-{ config, ... }:
+{ lib, pkgs, ... }:
 
+let
+  browse = pkgs.callPackage ../../pkgs/browse { };
+in
 {
+  home.packages = [ browse ];
+
   programs.opencode = {
     enable = true;
     settings = {
@@ -15,13 +20,9 @@
 
       mcp.servers.browse = {
         type = "local";
-        command = [
-          "${config.home.homeDirectory}/.local/bin/browse"
-          "mcp"
-        ];
+        command = [ (lib.getExe browse) "mcp" ];
         cwd = "~";
         pool = true;
-        environment.OPENCODE_BROWSER_RUNTIME = "auto-update";
       };
 
       permissions = [{

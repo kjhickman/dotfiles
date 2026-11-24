@@ -1,0 +1,13 @@
+{
+  "version": "0.1.5",
+  "targets": {
+    "x86_64-linux": {
+      "url": "https://anoma.ly/release/browse/files/47b34fd98912c09728d5385ef3aa712f86f5fe3dfee86ead38ed645a29d95d19/opencode-browse-linux-x64-musl-0.1.5.tgz",
+      "sha256": "47b34fd98912c09728d5385ef3aa712f86f5fe3dfee86ead38ed645a29d95d19"
+    },
+    "aarch64-darwin": {
+      "url": "https://anoma.ly/release/browse/files/d63b30d9b89d05070a3310d2d80435e06ab9cc35216b801acc68f969e14202bf/opencode-browse-darwin-arm64-0.1.5.tgz",
+      "sha256": "d63b30d9b89d05070a3310d2d80435e06ab9cc35216b801acc68f969e14202bf"
+    }
+  }
+}
