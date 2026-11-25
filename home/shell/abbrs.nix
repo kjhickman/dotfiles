@@ -14,7 +14,7 @@
     gundo = "git reset HEAD~1 --mixed";
 
     tf = "terraform";
-    oc = "opencode2";
+    oc = "opencode";
     agy = "agy --dangerously-skip-permissions";
   };
 }
